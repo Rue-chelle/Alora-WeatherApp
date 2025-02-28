@@ -4,7 +4,7 @@ body{
   
   
 }
-app{
+.app{
     background: white;
     max-width: 600px;
     margin: 45px auto;
@@ -12,4 +12,24 @@ app{
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08) ;
     border-radius: 16px;
 
+}
+.search-form-input{
+    background-color: #f9f7fe;
+    border: none;
+    border-radius: 6px;
+    width: 80%;
+    padding: 15px 20px;
+    font-size: 16px;
+
+}
+
+.search-form-button{
+
+    background: plum;
+    padding: 15px 30px;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-left: 5px;
+    color: white;
 }
