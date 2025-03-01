@@ -6,15 +6,23 @@
     <link rel="stylesheet" href="scr/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <title>WeatherApp</title>
 </head>
 <body>
     <div class="app">
     <header>
-        <form class="search-form">
-            <input type="search" placeholder="Enter city.." required class="search-form-input"/>
-            <input type="submit" value="search" class="search-form-button"/>
+        <form class="search-form"
+         id="search-form" >
+            <input type="search"
+             placeholder="Enter city"
+              required 
+              id="search-form-input"
+              class="search-form-input"/>
+            <input
+             type="submit" 
+             value="search"
+              class="search-form-button"/>
 
         </form>
     </header>
@@ -23,7 +31,7 @@
 <main>
     <div class="weather-data">
     <div>
-    <h1 class="city-display">Bulawayo</h1>
+    <h1 class="city-display" id="city">Bulawayo</h1>
     <p class="weather-details">
         Friday 16:00, scattered clouds
         <br/>
@@ -40,5 +48,6 @@
 
 <footer>Coded by <a href="https://github.com/Rue-chelle">Michelle</a>, Open sourced on <a href="https://github.com/Rue-chelle/Alora-WeatherApp">github</a> and hosted on <a href="https://alora-weather-app.netlify.app/">Netlify</a> </footer>
 </div>
+<script src="scr/app.js"></script>
 </body>
 </html>
