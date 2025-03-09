@@ -18,6 +18,11 @@ function refreshWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
   getForecast(response.data.city);
+
+  // show weather data and hide loader
+  document.querySelector(".loader").style.display = "none";
+  document.querySelector(".weather-data").style.display = "flex";
+  document.querySelector(".weather-forecast").style.display = "flex";
 }
 
 function formatDate(date) {
@@ -42,10 +47,21 @@ function formatDate(date) {
 }
 
 function searchCity(city) {
+  //hide weather data and show loader
+  document.querySelector(".loader").style.display = "block";
+  document.querySelector(".weather-data").style.display = "none";
+  document.querySelector(".weather-forecast").style.display = "none";
   //make api call and updade ui
   let apiKey = "84cf7eo6b70eb739dfa7d76a00dbfabt";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(refreshWeather);
+  axios
+    .get(apiUrl)
+    .then(refreshWeather)
+    .catch(() => {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector(".weather-data").style.display = "flex";
+      document.querySelector(".weather-forecast").style.display = "flex";
+    });
 }
 
 function handleSearchSubmit(event) {
@@ -64,7 +80,15 @@ function formatDay(timestamp) {
 function getForecast(city) {
   let apiKey = "84cf7eo6b70eb739dfa7d76a00dbfabt";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+  // axios is a promise based http library so inside the then function we make loader visible and hide weather
+  axios
+    .get(apiUrl)
+    .then(displayForecast)
+    .catch(() => {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector(".weather-data").style.display = "flex";
+      document.querySelector(".weather-forecast").style.display = "flex";
+    });
 }
 
 function displayForecast(response) {

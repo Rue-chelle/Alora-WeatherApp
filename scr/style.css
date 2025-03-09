@@ -1,122 +1,133 @@
-body{
-    background-color: #e6e4ec;
-    font-family: "Roboto", sans-serif;
-  
+body {
+  background-color: #e6e4ec;
+  font-family: "Roboto", sans-serif;
 }
-.app{
-    background: white;
-    max-width: 600px;
-    margin: 45px auto;
-    padding: 30px;
-    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08) ;
-    border-radius: 16px;
-
+.app {
+  background: white;
+  max-width: 600px;
+  margin: 45px auto;
+  padding: 30px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
 }
 
-a{
-    color: plum;
+a {
+  color: plum;
 }
 
-header{
-    border-bottom: 1px solid #f9f7fe ;
-    padding: 0 0 30px 0;
+header {
+  border-bottom: 1px solid #f9f7fe;
+  padding: 0 0 30px 0;
 }
-.search-form-input{
-    background-color: #f9f7fe;
-    border: none;
-    border-radius: 6px;
-    width: 80%;
-    padding: 15px 20px;
-    font-size: 16px;
+.search-form-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  padding: 15px 20px;
+  font-size: 16px;
+}
 
+.search-form-button {
+  background: plum;
+  padding: 15px 30px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-left: 5px;
+  color: white;
 }
-
-.search-form-button{
-
-    background: plum;
-    padding: 15px 30px;
-    border: none;
-    font-size: 16px;
-    border-radius: 6px;
-    margin-left: 5px;
-    color: white;
+main {
+  padding: 30px;
 }
-main{
-    padding: 30px;
-
+.city-display {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 48px;
 }
-.city-display{
-    margin: 0;
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 48px;
-
+.weather-details {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(39, 33, 66, 0.4);
+  font-weight: 500;
 }
-.weather-details{
-    font-size: 16px;
-    line-height: 24px;
-    color: rgba(39,33,66,0.4);
-    font-weight: 500;
-
+.weather-details strong {
+  color: rgb(236, 36, 103);
 }
-.weather-details strong{
-    color:rgb(236, 36, 103) ;
+.weather-temperature-container {
+  display: flex;
 }
-.weather-temperature-container{
-    display: flex;
-
+.temperature-value {
+  font-size: 88px;
+  font-weight: bold;
 }
-.temperature-value{
-    font-size: 88px;
-    font-weight: bold;
+.weather-icon {
+  font-size: 44px;
+  margin-top: 22px;
+  margin-left: 10px;
 }
-.weather-icon{
-    font-size: 44px;
-    margin-top: 22px;
-    margin-left: 10px;
-  
+.temperature-unit {
+  margin-top: 16px;
+  font-size: 28px;
 }
-.temperature-unit{
-    margin-top: 16px;
-    font-size: 28px;
-}
-.weather-data{
-    display: flex;
-    justify-content: space-between;
+.weather-data {
+  display: flex;
+  justify-content: space-between;
 }
 .weather-forecast {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-  }
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
 .weather-forecast-date {
-    text-align: center;
-    color: rgba(39, 33, 66, 0.4);
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 10px;
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  width: 85px;
+  height: 85px;
+  display: block;
+  margin: 0 auto;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: #f65282;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .weather-forecast-icon {
-    width: 85px;
-    height: 85px;
-    display: block;
-    margin: 0 auto;
+  100% {
+    transform: rotate(360deg);
   }
-  .weather-forecast-temperatures {
-    text-align: center;
-    color: #f65282;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  .weather-forecast-temperature {
-    padding: 0 10px;
-  }
-footer{
-    border-top: 1px solid #f9f7fe ;
-    padding: 30px 0 0 0;
-    text-align: center;
-    font-size: 13px;
-    color: rgba(0,0,0,0.6);
 }
