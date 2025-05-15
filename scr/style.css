@@ -131,3 +131,17 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .weather-info {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+ body {
+    font-size: 14px;
+  } 
+}
